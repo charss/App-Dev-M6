@@ -25,7 +25,6 @@
 
     <?php
     if(isset($_POST['submit'])) {
-        echo "okay";
         $name = $_POST['name'];
         $breed = $_POST['breed'];
         $age = $_POST['age'];
@@ -33,6 +32,8 @@
         $color = $_POST['color'];
         $height = $_POST['height'];
         $weight = $_POST['weight'];
+
+
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -46,7 +47,7 @@
         }
 
         $sql = "INSERT INTO dogs (d_name, d_breed, d_age, d_address, d_color, d_height, d_weight)
-        VALUES ('$name', '$breed', '$age', '$address', '$color', '$height',' $weight')";
+        VALUES ('$name', '$breed', '$age', '$address', '$color', '$height', '$weight')";
 
         if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
